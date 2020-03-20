@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 补充按钮事件的函数，确认用户是否退出当前页面，确认之后关闭窗口 -->
+    <!-- <input type='button' value='关闭窗口' onclick="winClose()" />
+    <script>
+        function winClose(){
+            if(confirm('你确当要退出吗？')){
+                window.close();
+            }
+        }
+    </script> -->
+
+    <!-- 完成showImg()函数，要求能够动态根据下拉列表的选项变 化，更新图片的显示 -->
+    <!-- <img id='pic' src="./img1.jpg" alt="picture" width='200' height='200' />
+    <br/>
+
+    <select id="sel" onchange="showImg(this)"> 
+        <option value="img1" selected="selected">城市生活</option>
+        <option value="img2">都市早报</option>
+        <option value="img3">青山绿水</option> 
+    </select>
+
+    <script>
+        var osel = document.getElementById('sel');
+        function getname(itself){
+            var length = itself.length - 1;
+            for(var i = length; i >= 0; i--){
+                if(itself.options[i].selected == true){
+                    return itself.options[i].value;
+                }
+            }
+        }
+        function showImg(thisitem){
+            document.getElementById("pic").src= getname(thisitem)+".jpg";
+        }
+    </script> -->
+
+    <!-- 获取页面中所有的checklist -->
+    <!-- <input type="text" class="1">
+    <input type="checkbox" class="2">
+    <input type="checkbox" class="3">
+    <input type="text" class="4">
+    <input type="text" class="5">
+    <input type="button" class="6">
+
+    <script>
+        var domList = document.getElementsByTagName('input');
+        var checkList = [];
+        var len = domList.length;
+        while(len--){
+            if(domList[len].type == 'checkbox'){
+                checkList.push(domList[len]);
+            }
+        }
+        console.log(checkList);
+    </script> -->
+    <!-- <div id="demo"></div>
+    <script>
+        document.getElementById("demo").innerHTML = "页面位置是 " + window.location.href;
+    </script> -->
+</body>
+</html>
