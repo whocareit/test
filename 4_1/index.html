@@ -1,0 +1,67 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-04-01 15:55:22
+ * @LastEditTime: 2020-04-01 16:11:02
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit 幻灯片实现
+ * @FilePath: \test\4_1\index.html
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>幻灯片</title>
+     <style>
+         *{
+             margin: 0;
+             padding: 0;
+         }
+         #root{
+            width: 500px;
+            height: 400px;
+            background-image: url('./img/1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 50px auto;
+            animation: light 4s ease infinite;
+            -webkit-animation: light 4s ease infinite;
+         }
+         @keyframes light{
+             0%{
+                background-image: url('./img/1.jpg');
+             }
+             25%{
+                background-image: url('./img/2.jpg');
+             }
+             50%{
+                background-image: url('./img/3.jpg');
+             }
+             100%{
+                background-image: url('./img/4.jpg');
+             }
+         }
+         @-webkit-keyframes light{
+             0%{
+                background-image: url('./img/1.jpg');
+             }
+             25%{
+                background-image: url('./img/2.jpg');
+             }
+             50%{
+                background-image: url('./img/3.jpg');
+             }
+             75%{
+                background-image: url('./img/4.jpg');
+             }
+             100%{
+                background-image: url('./img/1.jpg');
+             }
+         }
+     </style>
+ </head>
+ <body>
+     <div id="root"></div>
+ </body>
+ </html>
