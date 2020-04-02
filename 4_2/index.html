@@ -1,0 +1,45 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-04-02 09:45:02
+ * @LastEditTime: 2020-04-02 10:12:46
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings 冒泡测试
+ * @FilePath: \test\4_2\index.html
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+         .wrapper{
+             width: 200px;
+             height: 200px;
+             background-color: red;
+         }
+         .item{
+             width: 100px;
+             height: 100px;
+             background-color: black;
+         }
+     </style>
+ </head>
+ <body>
+     <div class="wrapper">
+         <div class="item"></div>
+     </div>
+     <script>
+         let wrapper = document.getElementsByClassName('wrapper')[0];
+         let item = document.getElementsByClassName('item')[0];
+         wrapper.onclick = function(){
+            console.log('456');
+         }
+         item.onclick = function(e){
+           e.stopPropagation();
+            console.log('123')
+         }
+     </script>
+ </body>
+ </html>
