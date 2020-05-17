@@ -43,6 +43,24 @@ Function.prototype.newApply = function(ctx, arr){
     }
 }
 
+
+Function.prototype.myApply = function(context = window, args){
+    if(this == Function.prototype){
+        return undefined;
+    }
+
+    const fn = Symbol();
+    context[fn] = this;
+    let result;
+    if(Array.isArray(args)){
+        result = context[fn](...args);
+    } else {
+        result = context[fn]();
+    }
+
+    delete context[fn];
+    return result;
+}
 //函数柯里化：通俗说就是在进行函数传参的过程中可以通过多次的参数传递，使得整个函数的参数达到饱和的过程
 
 //通过两次传参达到饱和
