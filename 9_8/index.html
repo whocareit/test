@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="ddl">
+        <option value="100" token="12" >选项1</option>
+        <option value="200" token="13" >选项2</option>
+        <option value="300" token="14" >选项3</option>
+    </select>
+    <!-- 相当于你代码中的input后去触发的方法 -->
+    <button onclick="changeToken()">token</button>
+    <script src="https://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+    <script>    
+        function changeToken(){
+            //这样是能够获取到token值得
+            var iteValue = $("#ddl").find("option:selected").attr('token')
+            console.log('token的值:' + iteValue);
+        }
+        var abc = {
+            id: 1,
+            index: 2,
+            token: ''
+        }
+    </script>
+</body>
+</html>
